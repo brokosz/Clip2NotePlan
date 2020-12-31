@@ -15,7 +15,7 @@ CLIP_DATE=`date +"%Y-%m-%d %T"`
 
 # Make a little header ... could be extended
 if [ ! -z "$POPCLIP_BROWSER_TITLE" ]; then
-	HEADER="# $POPCLIP_BROWSER_TITLE\nsource: $POPCLIP_BROWSER_URL\ndate: $CLIP_DATE\n"
+	HEADER="# $POPCLIP_BROWSER_TITLE\nsource: $POPCLIP_BROWSER_URL\ndate: $CLIP_DATE\n#clip\n"
 # else
 	# HEADER="\nfrom $POPCLIP_BROWSER_URL\n"
 fi

@@ -64,6 +64,22 @@
 				<string>no</string>
 			</array>
 			</dict>
+			<dict>
+				<key>Option Identifier</key>
+				<string>date</string>
+				<key>Option Label</key>
+				<string>Add date to header?</string>
+				<key>Option Type</key>
+				<string>boolean</string>
+			</dict>
+						<dict>
+				<key>Option Identifier</key>
+				<string>tag</string>
+				<key>Option Label</key>
+				<string>Add tag to header?</string>
+				<key>Option Type</key>
+				<string>boolean</string>
+			</dict>
 		</array>
 		<key>Credits</key>
 		<array>

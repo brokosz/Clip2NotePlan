@@ -11,11 +11,18 @@ MD_OUT=`echo $POPCLIP_HTML | ./html2text.py`
 # $OPEN_NOTE = no
 # fi
 
-CLIP_DATE=`date +"%Y-%m-%d %T"`
+
+if [ "$POPCLIP_OPTION_DATE" = 1 ]; then
+CLIP_DATE=echo -e "date: `date +"%Y-%m-%d %T"`  \n"
+fi
+
+if [ "$POPCLIP_OPTION_TAG" = 1 ]; then
+CLIP_TAG=echo -e "#clip  \n"
+fi
 
 # Make a little header ... could be extended
 if [ ! -z "$POPCLIP_BROWSER_TITLE" ]; then
-	HEADER="# $POPCLIP_BROWSER_TITLE  \nsource: $POPCLIP_BROWSER_URL  \ndate: $CLIP_DATE  \n#clip  \n"
+	HEADER="# $POPCLIP_BROWSER_TITLE  \nsource: $POPCLIP_BROWSER_URL  \n$CLIP_DATE$CLIP_TAG"
 # else
 	# HEADER="\nfrom $POPCLIP_BROWSER_URL\n"
 fi

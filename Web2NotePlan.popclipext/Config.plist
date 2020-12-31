@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>Actions</key>
+		<array>
+			<dict>
+				<key>Title</key>
+				<string>Web to NotePlan</string>
+				<key>Image File</key>
+				<string>NotePlan.png</string>
+				<key>Shell Script File</key>
+				<string>html2md.sh</string>
+				<key>Pass HTML</key>
+				<true/>
+				<key>Long Running</key>
+				<true/>
+				<key>Requirements</key>
+				<array>
+					<string>html</string>
+				</array>
+			</dict>
+		</array>
+		<key>Extension Description</key>
+		<string>Take web text and make a new NotePlan note from it.</string>
+		<key>Extension Identifier</key>
+		<string>co.noteplan.Web2NotePlan</string>
+		<key>Extension Name</key>
+		<string>Web to NotePlan</string>
+		<key>Extension Long Name</key>
+		<string>Web to NotePlan (as Markdown)</string>
+		<key>Stay Visible</key>
+		<false/>
+		<key>Script Interpreter</key>
+		<string>/bin/bash</string>
+		<key>Apps</key>
+		<array>
+			<dict>
+				<key>Bundle Identifiers</key>
+				<array>
+					<string>co.noteplan.NotePlan</string>
+					<string>co.noteplan.NotePlan3</string>
+				</array>
+				<key>Check Installed</key>
+				<true/>
+				<key>Link</key>
+				<string>http://noteplan.co/</string>
+				<key>Name</key>
+				<string>NotePlan</string>
+			</dict>
+		</array>
+		<key>Options</key>
+		<array>
+			<dict>
+				<key>Option Identifier</key>
+				<string>opennewnote</string>
+				<key>Option Label</key>
+				<string>Open the new note?</string>
+			<key>Option Type</key>
+			<string>multiple</string>
+			<key>Option Values</key>
+			<array>
+				<string>yes</string>
+				<string>no</string>
+			</array>
+			</dict>
+		</array>
+		<key>Credits</key>
+		<array>
+			<dict>
+				<key>Name</key>
+				<string>Jonathan Clark</string>
+				<key>Name</key>
+				<string>Brad Rokosz</string>
+				<key>Name</key>
+				<string>Aaron Swartz</string>
+			</dict>
+		</array>
+	</dict>
+</plist>

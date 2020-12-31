@@ -4,7 +4,7 @@
 MD_OUT=`echo $POPCLIP_HTML | ./html2text.py`
 
 # Default to opening new note, unless the option is set to no
-# OPEN_NOTE=yes
+OPEN_NOTE=yes
 
 # FIXME: $POPCLIP_OPTION_OPENNEWNOTE doesn't seem to be filled in from PopClip
 # if [ "$POPCLIP_OPTION_OPENNEWNOTE" = "no" ]; then
@@ -35,5 +35,5 @@ fi
 MD_OUT_ENCODED=`echo "$HEADER\n$MD_OUT" | perl -pe's/([^-_.~A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg'`
 
 # Send this to NotePlan to create a new note with
-# open "noteplan://x-callback-url/addNote?text=$MD_OUT_ENCODED&openNote=$OPEN_NOTE"
-open "noteplan://x-callback-url/addNote?text=$MD_OUT_ENCODED&openNote=$POPCLIP_OPTION_OPENNEWNOTE"
+#open "noteplan://x-callback-url/addNote?text=$MD_OUT_ENCODED&openNote=$POPCLIP_OPTION_OPENNEWNOTE"
+open "noteplan://x-callback-url/addNote?text=$MD_OUT_ENCODED&openNote=$OPEN_NOTE"

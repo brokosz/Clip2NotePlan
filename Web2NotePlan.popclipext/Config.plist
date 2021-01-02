@@ -10,7 +10,7 @@
 				<key>Image File</key>
 				<string>NotePlan.png</string>
 				<key>Shell Script File</key>
-				<string>html2md.sh</string>
+<string>html2np.sh</string>
 				<key>Pass HTML</key>
 				<true/>
 				<key>Long Running</key>
@@ -56,29 +56,34 @@
 				<string>opennewnote</string>
 				<key>Option Label</key>
 				<string>Open the new note?</string>
-			<key>Option Type</key>
-			<string>multiple</string>
-			<key>Option Values</key>
-			<array>
-				<string>yes</string>
-				<string>no</string>
-			</array>
+				<key>Option Type</key>
+				<string>boolean</string>
 			</dict>
 			<dict>
 				<key>Option Identifier</key>
-				<string>date</string>
+				<string>subwindow</string>
+				<key>Option Label</key>
+				<string>Open new note in sub window?</string>
+				<key>Option Type</key>
+				<string>boolean</string>
+			</dict>
+			<dict>
+				<key>Option Identifier</key>
+				<string>adddate</string>
 				<key>Option Label</key>
 				<string>Add date to header?</string>
 				<key>Option Type</key>
 				<string>boolean</string>
 			</dict>
-						<dict>
+			<dict>
 				<key>Option Identifier</key>
-				<string>tag</string>
+				<string>addtag</string>
 				<key>Option Label</key>
-				<string>Add tag to header?</string>
+				<string>Tag that's appended to show source (optional)</string>
 				<key>Option Type</key>
-				<string>boolean</string>
+				<string>string</string>
+				<key>Option Default Value</key>
+				<string>#PopClipped</string>
 			</dict>
 		</array>
 		<key>Credits</key>

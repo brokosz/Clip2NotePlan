@@ -10,7 +10,7 @@
 				<key>Image File</key>
 				<string>NotePlan.png</string>
 				<key>Shell Script File</key>
-<string>html2np.sh</string>
+				<string>html2np.sh</string>
 				<key>Pass HTML</key>
 				<true/>
 				<key>Long Running</key>
@@ -55,7 +55,7 @@
 				<key>Option Identifier</key>
 				<string>opennewnote</string>
 				<key>Option Label</key>
-				<string>Open the new note?</string>
+				<string>Open note?</string>
 				<key>Option Type</key>
 				<string>boolean</string>
 			</dict>
@@ -63,7 +63,7 @@
 				<key>Option Identifier</key>
 				<string>subwindow</string>
 				<key>Option Label</key>
-				<string>Open new note in sub window?</string>
+				<string>Open in sub window?</string>
 				<key>Option Type</key>
 				<string>boolean</string>
 			</dict>
@@ -79,7 +79,7 @@
 				<key>Option Identifier</key>
 				<string>addtag</string>
 				<key>Option Label</key>
-				<string>Tag that's appended to show source (optional)</string>
+				<string>Tag (optional)</string>
 				<key>Option Type</key>
 				<string>string</string>
 				<key>Option Default Value</key>

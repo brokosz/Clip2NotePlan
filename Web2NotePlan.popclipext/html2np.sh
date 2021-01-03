@@ -22,7 +22,6 @@ fi
 CLIP_DATE=""
 if [ "$POPCLIP_OPTION_ADDDATE" == "1" ]; then
   CLIP_DATE=`echo "date: `date +"%Y-%m-%d %T"`  \n"`
-  # CLIP_DATE=echo -e "date: `date +"%Y-%m-%d %T"`  \n" # -e is not POSIX compliant, I'm told
 fi
 
 # FYI, POPCLIP_MODIFIER_FLAGS of 1048576 = ⌘ pressed

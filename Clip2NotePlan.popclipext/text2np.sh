@@ -16,7 +16,7 @@ fi
 # Include source if it's asked for in options
 CLIP_SOURCE=""
 if [ -n "$POPCLIP_OPTION_ADDSOURCE" ]; then
-	$CLIP_SOURCE=`echo $POPCLIP_APP_NAME`
+	$CLIP_SOURCE=`echo "source: $POPCLIP_APP_NAME"`
 fi
 # Get clip tag to append if it's asked for in options
 CLIP_TAG=""

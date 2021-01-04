@@ -1,6 +1,6 @@
-# Web2NotePlan PopClip extension
+# Clip2NotePlan PopClip extension
 
-An extension for [PopClip](http://pilotmoon.com/popclip) to take web text and add to [NotePlan app](https://noteplan.co/), keeping as much of the formatting as NotePlan allows. Note:
+An extension for [PopClip](http://pilotmoon.com/popclip) to take web and plain text and add to [NotePlan app](https://noteplan.co/), keeping as much of the formatting as NotePlan allows. Note:
 
 - this only works on web content - not source code
 - it creates a few lines of header that includes the web page title, source and date of clipping

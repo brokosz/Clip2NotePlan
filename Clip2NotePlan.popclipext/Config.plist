@@ -20,15 +20,32 @@
 					<string>html</string>
 				</array>
 			</dict>
+			<dict>
+				<key>Title</key>
+				<string>Text to NotePlan</string>
+				<key>Image File</key>
+				<string>NotePlan.png</string>
+				<key>Shell Script File</key>
+				<string>text2np.sh</string>
+				<key>Pass HTML</key>
+				<false/>
+				<key>Long Running</key>
+				<true/>
+				<key>Requirements</key>
+				<array>
+					<string>copy</string>
+					<string>!html</string>
+				</array>
+			</dict>
 		</array>
 		<key>Extension Description</key>
-		<string>Take web text and make a new NotePlan note from it.</string>
+		<string>Take html or text and make a new NotePlan note from it.</string>
 		<key>Extension Identifier</key>
 		<string>co.noteplan.Web2NotePlan</string>
 		<key>Extension Name</key>
-		<string>Web to NotePlan</string>
+		<string>Clip to NotePlan</string>
 		<key>Extension Long Name</key>
-		<string>Web to NotePlan (as Markdown)</string>
+		<string>Clip to NotePlan (as Markdown)</string>
 		<key>Stay Visible</key>
 		<false/>
 		<key>Script Interpreter</key>
@@ -53,7 +70,7 @@
 		<array>
 			<dict>
 				<key>Option Identifier</key>
-				<string>opennewnote</string>
+				<string>opennote</string>
 				<key>Option Label</key>
 				<string>Open note?</string>
 				<key>Option Type</key>
@@ -64,6 +81,14 @@
 				<string>subwindow</string>
 				<key>Option Label</key>
 				<string>Open in sub window?</string>
+				<key>Option Type</key>
+				<string>boolean</string>
+			</dict>
+			<dict>
+				<key>Option Identifier</key>
+				<string>addsource</string>
+				<key>Option Label</key>
+				<string>Add clip source?</string>
 				<key>Option Type</key>
 				<string>boolean</string>
 			</dict>
@@ -83,7 +108,7 @@
 				<key>Option Type</key>
 				<string>string</string>
 				<key>Option Default Value</key>
-				<string>#PopClipped</string>
+				<string>PopClipped</string>
 			</dict>
 		</array>
 		<key>Credits</key>

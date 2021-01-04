@@ -21,12 +21,12 @@ fi
 # Work out date if requested to add date to headers
 CLIP_DATE=""
 if [ "$POPCLIP_OPTION_ADDDATE" == "1" ]; then
-	$CLIP_DATE=`date +"%Y-%m-%d %T"`
+	$CLIP_DATE=`date '+%Y-%m-%d %T'`
 fi
 # Get clip tag to append if it's asked for in options
 CLIP_TAG=""
 if [ -n "$POPCLIP_OPTION_ADDTAG" ]; then
-	$CLIP_TAG=`echo $POPCLIP_OPTION_ADDTAG`
+	$CLIP_TAG=`echo '#$POPCLIP_OPTION_ADDTAG'`
 fi
 
 # FYI, POPCLIP_MODIFIER_FLAGS of 1048576 = ⌘ pressed
@@ -36,7 +36,7 @@ if [[ "$POPCLIP_MODIFIER_FLAGS" -eq 0 ]]; then
 	
 	# Make a little header ... could be extended
 	if [ -n "$POPCLIP_BROWSER_TITLE" ]; then
-		HEADER="# $POPCLIP_BROWSER_TITLE\nsource: $CLIP_SOURCE\ndate: $CLIP_DATE\n#$CLIP_TAG\n"
+		HEADER="# $POPCLIP_BROWSER_TITLE\nsource: $CLIP_SOURCE\ndate: $CLIP_DATE\n$CLIP_TAG\n"
 		MD_OUT="$MD"
 	else
 		MD_OUT="$MD\n$CLIP_TAG"
@@ -55,7 +55,7 @@ else
 		# URL encode the markdown
 		#MD_OUT_ENCODED=`echo "$MD" | perl -pe's/([^-_.~A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg'`
 	# Decode HTML entities (if present)
-	MD_OUT_DECODED=`echo "$MD\n#$CLIP_TAG" | perl -n -mHTML::Entities -e ' ; print HTML::Entities::decode_entities($_) ;'`
+	MD_OUT_DECODED=`echo "$MD\n$CLIP_TAG" | perl -n -mHTML::Entities -e ' ; print HTML::Entities::decode_entities($_) ;'`
 	# URL %-encode the markdown
 	MD_OUT_ENCODED=`echo "$MD_OUT_DECODED" | perl -pe's/([^-_.~A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg'`
 

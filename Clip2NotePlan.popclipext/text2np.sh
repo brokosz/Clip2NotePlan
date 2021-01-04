@@ -21,7 +21,7 @@ fi
 # Get clip tag to append if it's asked for in options
 CLIP_TAG=""
 if [ -n "$POPCLIP_OPTION_ADDTAG" ]; then
-	$CLIP_TAG=`echo $POPCLIP_OPTION_ADDTAG`
+	$CLIP_TAG=`echo '#$POPCLIP_OPTION_ADDTAG'`
 fi
 
 # FYI, POPCLIP_MODIFIER_FLAGS of 1048576 = ⌘ pressed
@@ -30,7 +30,7 @@ fi
 if [[ "$POPCLIP_MODIFIER_FLAGS" -eq 0 ]]; then
 	
 	# Decode HTML entities (if present)
-	MD_OUT_DECODED=`echo "$MD\n$CLIP_SOURCE\n#$CLIP_TAG" | perl -n -mHTML::Entities -e ' ; print HTML::Entities::decode_entities($_) ;'`
+	MD_OUT_DECODED=`echo "$MD\n$CLIP_SOURCE\n$CLIP_TAG" | perl -n -mHTML::Entities -e ' ; print HTML::Entities::decode_entities($_) ;'`
 	# URL %-encode the markdown
 	MD_OUT_ENCODED=`echo "$MD_OUT_DECODED" | perl -pe's/([^-_.~A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg'`
 
@@ -42,7 +42,7 @@ if [[ "$POPCLIP_MODIFIER_FLAGS" -eq 0 ]]; then
 else
 	
 	# Decode HTML entities (if present)
-	MD_OUT_DECODED=`echo "$MD\n$CLIP_SOURCE\n" | perl -n -mHTML::Entities -e ' ; print HTML::Entities::decode_entities($_) ;'`
+	MD_OUT_DECODED=`echo "$MD\n$CLIP_SOURCE\n$CLIP_TAG" | perl -n -mHTML::Entities -e ' ; print HTML::Entities::decode_entities($_) ;'`
 	# URL %-encode the markdown
 	MD_OUT_ENCODED=`echo "$MD_OUT_DECODED" | perl -pe's/([^-_.~A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg'`
 

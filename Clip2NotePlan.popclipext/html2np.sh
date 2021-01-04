@@ -16,7 +16,7 @@ fi
 # Include source if it's asked for in options
 CLIP_SOURCE=""
 if [ -n "$POPCLIP_OPTION_ADDSOURCE" ]; then
-	$CLIP_SOURCE=`echo '$POPCLIP_BROWSER_URL'`
+	$CLIP_SOURCE=`echo $POPCLIP_BROWSER_URL`
 fi
 # Work out date if requested to add date to headers
 CLIP_DATE=""

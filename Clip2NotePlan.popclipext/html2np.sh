@@ -15,8 +15,8 @@ if [ "$POPCLIP_OPTION_SUBWINDOW" == "1" ]; then
 fi
 # Include source if it's asked for in options
 CLIP_SOURCE=""
-if [ -n "$POPCLIP_BROWSER_URL" ]; then
-	$CLIP_SOURCE=`echo $POPCLIP_BROWSER_URL`
+if [ -n "$POPCLIP_OPTION_ADDSOURCE" ]; then
+	$CLIP_SOURCE=`echo '$POPCLIP_BROWSER_URL'`
 fi
 # Work out date if requested to add date to headers
 CLIP_DATE=""

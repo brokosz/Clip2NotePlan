@@ -6,27 +6,31 @@ MD=`echo $POPCLIP_HTML | ./html2text.py`
 # Default to not opening new note, unless the option is set to yes
 OPEN_NOTE="no"
 if [ "$POPCLIP_OPTION_OPENNOTE" == "1" ]; then
-	$OPEN_NOTE="yes"
+	OPEN_NOTE="yes"
 fi
+
 # Default to not opening new note in new window, unless the option is set to yes
 SUB_WINDOW="no"
 if [ "$POPCLIP_OPTION_SUBWINDOW" == "1" ]; then
-	$SUB_WINDOW="yes"
+	SUB_WINDOW="yes"
 fi
+
 # Include source if it's asked for in options
 CLIP_SOURCE=""
-if [ -n "$POPCLIP_OPTION_ADDSOURCE" ]; then
-	$CLIP_SOURCE=`echo $POPCLIP_BROWSER_URL`
+if [ "$POPCLIP_OPTION_ADDSOURCE" == "1" ]; then
+	CLIP_SOURCE=`echo $POPCLIP_BROWSER_URL`
 fi
+
 # Work out date if requested to add date to headers
 CLIP_DATE=""
 if [ "$POPCLIP_OPTION_ADDDATE" == "1" ]; then
-	$CLIP_DATE=`date '+%Y-%m-%d %T'`
+	CLIP_DATE=`date '+%Y-%m-%d %T'`
 fi
+
 # Get clip tag to append if it's asked for in options
 CLIP_TAG=""
-if [ -n "$POPCLIP_OPTION_ADDTAG" ]; then
-	$CLIP_TAG=`echo '#$POPCLIP_OPTION_ADDTAG'`
+if [ ! -z "$POPCLIP_OPTION_ADDTAG" ]; then
+	CLIP_TAG=`echo "#$POPCLIP_OPTION_ADDTAG"`
 fi
 
 # FYI, POPCLIP_MODIFIER_FLAGS of 1048576 = ⌘ pressed

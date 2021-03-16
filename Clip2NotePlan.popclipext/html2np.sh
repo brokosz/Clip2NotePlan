@@ -40,7 +40,7 @@ if [[ "$POPCLIP_MODIFIER_FLAGS" -eq 0 ]]; then
 	
 	# Make a little header ... could be extended
 	if [ -n "$POPCLIP_BROWSER_TITLE" ]; then
-		HEADER="# $POPCLIP_BROWSER_TITLE\nsource: $CLIP_SOURCE\ndate: $CLIP_DATE\n$CLIP_TAG\n"
+		HEADER="# $POPCLIP_BROWSER_TITLE\n---\nsource: $CLIP_SOURCE\ndate: $CLIP_DATE\n$CLIP_TAG\n---\n"
 		MD_OUT="$MD"
 	else
 		MD_OUT="$MD\n$CLIP_TAG"

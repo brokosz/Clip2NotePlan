@@ -108,7 +108,7 @@
 				<key>Option Type</key>
 				<string>string</string>
 				<key>Option Default Value</key>
-				<string>PopClipped</string>
+				<string>clipped</string>
 			</dict>
 		</array>
 		<key>Credits</key>

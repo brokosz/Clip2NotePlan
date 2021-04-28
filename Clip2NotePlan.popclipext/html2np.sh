@@ -43,7 +43,7 @@ if [[ "$POPCLIP_MODIFIER_FLAGS" -eq 0 ]]; then
 		HEADER="# $POPCLIP_BROWSER_TITLE\n---\nsource: $CLIP_SOURCE\ndate: $CLIP_DATE\n$CLIP_TAG\n---\n"
 		MD_OUT="$MD"
 	else
-		MD_OUT="$MD\n$CLIP_TAG"
+		MD_OUT="$MD\n\n$CLIP_TAG"
 	fi
 
 	# Decode HTML entities (if present)
@@ -59,7 +59,7 @@ else
 		# URL encode the markdown
 		#MD_OUT_ENCODED=`echo "$MD" | perl -pe's/([^-_.~A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg'`
 	# Decode HTML entities (if present)
-	MD_OUT_DECODED=`echo "$MD\n$CLIP_TAG" | perl -n -mHTML::Entities -e ' ; print HTML::Entities::decode_entities($_) ;'`
+	MD_OUT_DECODED=`echo "$MD\n\n$CLIP_TAG" | perl -n -mHTML::Entities -e ' ; print HTML::Entities::decode_entities($_) ;'`
 	# URL %-encode the markdown
 	MD_OUT_ENCODED=`echo "$MD_OUT_DECODED" | perl -pe's/([^-_.~A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg'`
 

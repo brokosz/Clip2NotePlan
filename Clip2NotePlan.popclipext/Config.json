@@ -1,0 +1,46 @@
+{
+  "App" : {
+    "Bundle Identifiers" : [
+      "co.noteplan.NotePlan",
+      "co.noteplan.NotePlan3",
+      "co.noteplan.NotePlan-setapp"
+    ],
+    "Check Installed" : true,
+    "Link" : "http:\/\/noteplan.co\/",
+    "Name" : "NotePlan"
+  },
+  "Extension Description" : "Take html or text and make a new NotePlan note from it.",
+  "Extension Icon" : "noteplan.png",
+  "Extension Identifier" : "co.noteplan.Web2NotePlan",
+  "Extension Name" : "Clip to NotePlan",
+  "Options" : [
+    {
+      "Option Identifier" : "opennote",
+      "Option Label" : "Open note?",
+      "Option Type" : "boolean"
+    },
+    {
+      "Option Identifier" : "subwindow",
+      "Option Label" : "Open in sub window?",
+      "Option Type" : "boolean"
+    },
+    {
+      "Option Identifier" : "addsource",
+      "Option Label" : "Add clip source?",
+      "Option Type" : "boolean"
+    },
+    {
+      "Option Identifier" : "adddate",
+      "Option Label" : "Add date to header?",
+      "Option Type" : "boolean"
+    },
+    {
+      "Option Default Value" : "clipped",
+      "Option Identifier" : "addtag",
+      "Option Label" : "Tag (optional)",
+      "Option Type" : "string"
+    }
+  ],
+  "Pass HTML" : true,
+  "Required Software Version" : 3543
+}

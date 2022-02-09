@@ -1,5 +1,14 @@
 # Clip2NotePlan PopClip extension
 
+
+**For better/simpler/updated PopClip extensions for NotePlan, see [this forum post.](https://forum.popclip.app/t/noteplan-3-daily-note-and-new-note-snippets/618/2)**
+
+
+
+
+***
+
+
 An extension for [PopClip](http://pilotmoon.com/popclip) to take web and plain text and add to [NotePlan app](https://noteplan.co/), keeping as much of the formatting as NotePlan allows. Note:
 
 - this only works on web content - not source code
